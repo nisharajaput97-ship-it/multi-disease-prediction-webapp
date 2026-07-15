@@ -1,54 +1,107 @@
-# Nisha Rajaput | Multiple Disease Prediction Webapp
+# Multi Disease Prediction Web App
 
-> **Abstract** : This customized Streamlit web app is designed for Nisha Rajaput and uses machine learning models to predict the probability of several diseases. Users can choose from the sidebar to make predictions using symptoms, physical health data, or blood test results. The app is built around a modern purple-teal theme and can be connected to your own GitHub account.
+## Overview
+This repository contains a customized disease prediction web application built using Streamlit. The app allows users to predict multiple medical conditions using trained machine learning models and provides a clean, easy-to-use interface for both clinical-style inputs and symptom-based diagnosis.
 
-### Project Owner
-- NISHA RAJAPUT
+## Project Owner
+- **Nisha Rajaput**
 
-### Project Team
-- Nisha Rajaput (Owner & Developer)
+## Repository Structure
+- `Frontend/` — Streamlit application and supporting files.
+- `Frontend/app.py` — Main Streamlit application.
+- `Frontend/code/` — Helper modules for disease model loading and symptom preparation.
+- `Frontend/models/` — Serialized machine learning model artifacts.
+- `Frontend/data/` — Symptom and disease data files.
+- `code/PIMA/` — Additional machine learning pipeline files and artifacts.
+- `docs/` — GitHub Pages landing page.
+- `README_local_run.md` — Local run instructions.
+- `run_local_app.bat` — Start the app locally on Windows.
+- `stop_local_app.bat` — Stop the local Streamlit server.
 
-### GitHub Setup
-To connect this project to your own GitHub account, run the following commands after replacing the placeholder repository name with your own:
-1. `git init`
-2. `git remote add origin https://github.com/<your-username>/<your-repo>.git`
-3. `git add .`
-4. `git commit -m "Customize branding for Nisha Rajaput"`
-5. `git push -u origin main`
+## Features
+- Predicts multiple diseases through separate modules
+- Streamlit-based interactive UI
+- Symptom-based diagnosis and direct health metric inputs
+- Custom branding for Nisha Rajaput
+- Local start/stop scripts for quick testing
+- GitHub Pages landing page support
 
-### Deployment Steps
-Please follow the below steps to run this project.
-<br>
-1. `pip install -r requirements.txt`<br>
-2. `cd Frontend`<br>
-3. `streamlit run app.py`<br><br>
+## Supported Predictions
+- Diabetes
+- Heart disease
+- Parkinson's disease
+- Liver disease
+- Hepatitis
+- Lung cancer
+- Chronic kidney disease
+- Breast cancer
+- Multi-disease symptom prediction
 
+## Requirements
+Install dependencies from the frontend requirements file:
 
-### Platform, Libraries and Frameworks used
-1. [Streamlit](https://docs.streamlit.io/library/get-started)
-2. [Python](https://www.python.org)
-3. [Sklearn](https://scikit-learn.org/stable/index.html)
+```powershell
+pip install -r Frontend/requirements.txt
+```
 
-### Dataset Used
-1. [Diabetes disease dataset](https://www.kaggle.com/datasets/mathchi/diabetes-data-set/data)
-2. [Heart disease dataset](https://www.kaggle.com/datasets/rishidamarla/heart-disease-prediction/data)
-3. [Parkinsons disease dataset](https://www.kaggle.com/code/arunkumarpyramid/detection-parkinson-s-disease/data)
-4. [Liver disease dataset](https://www.kaggle.com/code/harisyammnv/liver-disease-prediction/data)
-5. [Hepatities disease dataset](https://kaggle.com/dataset2)
-6. [Jaundice disease dataset](https://kaggle.com/dataset2)
-   
+Key packages:
+- streamlit
+- scikit-learn
+- joblib
+- pandas
+- numpy
+- pillow
+- plotly
+- seaborn
+- streamlit-option-menu
 
-<br></br>
+## Local Setup
+1. Open a terminal in the project root.
+2. Install dependencies:
+   ```powershell
+   pip install -r Frontend/requirements.txt
+   ```
+3. Run the app:
+   ```powershell
+   cd Frontend
+   streamlit run app.py
+   ```
+4. Open the web address shown by Streamlit, usually:
+   ```text
+   http://localhost:8501
+   ```
 
-## Research Paper: Nisha Rajaput | Multiple Disease Prediction Webapp
-- **Description:** A study that developed a web application capable of predicting multiple diseases, including diabetes, heart disease, Parkinson's, liver disease, jaundice, and hepatitis, using machine learning algorithms such as SVM, Decision Tree, and Random Forest. The system allows users to input data for a specific disease, and based on the trained model, the output is displayed. The paper also discusses the functional and non-functional requirements of the system, as well as the architecture design and implementation details.
-- [Online JETIR Paper](https://www.jetir.org/view?paper=JETIR2210432)
-- [Letter of Acceptance](https://drive.google.com/file/d/1TFkoafPQJmC3_-XekMwk_HUMa7PA89sq/view?usp=sharing)
-- [Certificate of Each Member](https://drive.google.com/file/d/1FVPssNXveIYHfmhjTETgvED6NeNBucPm/view?usp=sharing)
+## Easy Local Run on Windows
+Use the included helper files from the project root:
+- `run_local_app.bat` — start the app on port 8501
+- `stop_local_app.bat` — stop the local server
+- `README_local_run.md` — provides quick start instructions
 
+## Deployment
+This repository is configured for GitHub Pages using the `docs/` folder.
 
-### References
-- [1] Priyanka Sonar, Prof. K. Jaya Malini,” DIABETES PREDICTION USING DIFFERENT MACHINE LEARNING APPROACHES”, 2019 IEEE ,3rd International Conference on Computing Methodologies and Communication (ICCMC) 
-- [2] Archana Singh, Rakesh Kumar, “Heart Disease Prediction Using Machine Learning Algorithms”, 2020 IEEE, International Conference on Electrical and Electronics Engineering (ICE3) 
-- [3] A. Sivasangari, Baddigam Jaya Krishna Reddy, Annamareddy Kiran, P. Ajitha,” Diagnosis of Liver Disease using Machine Learning Models” 2020 Fourth International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC) 
+### GitHub Pages site
+The current live site target is:
+- `https://nisharajaput97-ship-it.github.io/multi-disease-prediction-webapp/`
+
+### GitHub Pages setup
+1. Open the repository on GitHub.
+2. Go to `Settings` → `Pages`.
+3. Select source: `main` branch and `/docs` folder.
+4. Save and wait a few minutes for the site to publish.
+
+## Notes
+- The project includes several large model artifact files; GitHub may warn about files larger than 50 MB.
+- For production deployment, consider hosting the Streamlit app on a dedicated cloud service.
+
+## Important Files
+- `Frontend/app.py` — main Streamlit application script.
+- `Frontend/code/DiseaseModel.py` — core prediction helper class.
+- `Frontend/code/helper.py` — symptom preprocessing helper.
+- `Frontend/models/` — stored machine learning models.
+- `Frontend/data/` — symptom and disease CSV/TSV files.
+- `docs/index.html` — GitHub Pages landing page.
+
+## Contact
+If you need support or additional customization, contact **Nisha Rajaput**.
 
