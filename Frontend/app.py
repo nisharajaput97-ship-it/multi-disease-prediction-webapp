@@ -55,6 +55,9 @@ st.markdown(
     h1, h2, h3, h4, h5, h6 {
         color: var(--text-color);
     }
+    footer, [data-testid="stToolbar"], [data-testid="stStatusWidget"], #MainMenu {
+        visibility: hidden !important;
+    }
     </style>
     """,
     unsafe_allow_html=True,
