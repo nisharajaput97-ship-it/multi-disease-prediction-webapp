@@ -1,3 +1,5 @@
+import os
+from pathlib import Path
 import streamlit as st
 import plotly.express as px
 from plotly.subplots import make_subplots
@@ -15,6 +17,9 @@ from code.helper import prepare_symptoms_array
 import seaborn as sns
 import matplotlib.pyplot as plt
 import joblib
+
+BASE_DIR = Path(__file__).resolve().parent
+os.chdir(BASE_DIR)
 
 st.set_page_config(
     page_title="Nisha Rajaput | Disease Prediction",
